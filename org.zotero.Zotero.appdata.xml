@@ -19,6 +19,9 @@
   <releases>
     <release version="5.0.34" date="2017-12-19"></release>
   </releases>
+  <icon type="remote" height="64" width="64">https://www.zotero.org/static/images/icons/zotero-icon-64-70.png</icon>
+  <icon type="remote" height="128" width="128">https://www.zotero.org/static/images/icons/zotero-icon-128-140.png</icon>
+  <icon type="remote" height="256" width="256">https://www.zotero.org/static/images/icons/zotero-icon-128-140%402x.png</icon>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
