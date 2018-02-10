@@ -18,6 +18,7 @@
   <update_contact>guillaumepoiriermorency@gmail.com</update_contact>
   <releases>
     <release version="5.0.34" date="2017-12-19"></release>
+    <release version="5.0.34.5" date="2018-02-01"></release>
   </releases>
   <icon type="remote" height="64" width="64">https://www.zotero.org/static/images/icons/zotero-icon-64-70.png</icon>
   <icon type="remote" height="128" width="128">https://www.zotero.org/static/images/icons/zotero-icon-128-140.png</icon>
@@ -52,6 +53,6 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <provides>
-  		<id>org.zotero.Zotero</id>
-	</provides>
+    <id>org.zotero.Zotero</id>
+  </provides>
 </component>
