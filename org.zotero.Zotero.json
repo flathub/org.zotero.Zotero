@@ -18,8 +18,8 @@
             "buildsystem": "simple",
             "sources": [{
                 "type": "archive",
-                "url": "https://download.zotero.org/client/release/5.0.36/Zotero-5.0.36_linux-x86_64.tar.bz2",
-                "sha256": "2c98c181b69cd05cdb6a53cea0d6fe9c55d63bf14aa1688ec060f46676c9dfec"
+                "url": "https://download.zotero.org/client/release/5.0.37/Zotero-5.0.37_linux-x86_64.tar.bz2",
+                "sha256": "4bc579f35ce602a827d2e81f8d36f9d1330dd42757823cc221764a423fafcd7f"
             },
             {
                 "type": "file",
