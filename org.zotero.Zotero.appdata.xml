@@ -10,6 +10,11 @@
       Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect,
       organize, cite, and share your research sources.
     </p>
+    <p>
+      NOTE! If your zotero folder is not located in your home folder then add
+      permission to access the zotero folder with the flatpak override command. (Usage:
+      "sudo flatpak override --filesystem=/PATH/TO/ZOTEROFOLDER/ org.zotero.Zotero")
+    </p>
   </description>
   <categories>
     <category>Office</category>
