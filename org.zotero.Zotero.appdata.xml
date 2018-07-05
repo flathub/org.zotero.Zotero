@@ -10,6 +10,12 @@
       Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect,
       organize, cite, and share your research sources.
     </p>
+    <p>
+      [NOTE] If your Zotero folder is not located in the default location (~/Zotero)
+      and is outside your home directory, please grant the permission to access
+      that folder by the flatpak-override command. (Usage: "flatpak override --user
+      --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero")
+    </p>
   </description>
   <categories>
     <category>Office</category>
