@@ -1,41 +1,54 @@
 {
-    "id": "org.zotero.Zotero",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
-    "sdk": "org.gnome.Sdk",
-    "command": "zotero",
-    "rename-desktop-file": "zotero.desktop",
-    "rename-icon": "zotero",
-    "finish-args": [
-        "--socket=x11",
-        "--share=ipc",
-        "--share=network",
-        "--filesystem=home"
-    ],
-    "modules": [
+  "id": "org.zotero.Zotero",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "3.26",
+  "sdk": "org.gnome.Sdk",
+  "command": "zotero",
+  "rename-desktop-file": "zotero.desktop",
+  "rename-icon": "zotero",
+  "finish-args": [
+    "--socket=x11",
+    "--share=ipc",
+    "--share=network",
+    "--filesystem=home"
+  ],
+  "modules": [
+    {
+      "name": "zotero",
+      "buildsystem": "simple",
+      "sources": [
         {
-            "name": "zotero",
-            "buildsystem": "simple",
-            "sources": [{
-                "type": "archive",
-                "url": "https://download.zotero.org/client/release/5.0.53/Zotero-5.0.53_linux-x86_64.tar.bz2",
-                "sha512": "43f7bc619552d10dcaa2a09ac735c24011a7ba6692ef8d878196cbfda023a39aed99cec7dae8550c59fab8d63f5c4d87a7ce57ba228db8eb6d3e8825b2be171a"
-            },
-            {
-                "type": "file",
-                "path": "org.zotero.Zotero.appdata.xml"
-            }],
-            "build-commands": [
-                "mkdir -p /app/{bin,share}",
-                "cp -R . /app/share/zotero",
-                "install -D chrome/icons/default/default16.png /app/share/icons/hicolor/16x16/apps/zotero.png",
-                "install -D chrome/icons/default/default32.png /app/share/icons/hicolor/32x32/apps/zotero.png",
-                "install -D chrome/icons/default/default48.png /app/share/icons/hicolor/48x48/apps/zotero.png",
-                "install -D chrome/icons/default/default256.png /app/share/icons/hicolor/256x256/apps/zotero.png",
-                "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=zotero --set-key=Icon --set-value=org.zotero.Zotero zotero.desktop",
-                "install -D org.zotero.Zotero.appdata.xml /app/share/appdata/org.zotero.Zotero.appdata.xml",
-                "ln -s /app/share/zotero/zotero /app/bin/zotero"
-            ]
+          "type": "archive",
+          "url": "https://download.zotero.org/client/release/5.0.55/Zotero-5.0.55_linux-x86_64.tar.bz2",
+          "sha512": "37e489d68b1b52db9283b1691d97745247baf85e72cb10c2278eff49f34b42e363b7ffc668beac4a9b7f0914131d4194187a42dc7b5603daf7d7de948a24f0f7",
+          "only-arches": [
+            "x86_64"
+          ]
+        },
+        {
+          "type": "archive",
+          "url": "https://download.zotero.org/client/release/5.0.55/Zotero-5.0.55_linux-i686.tar.bz2",
+          "sha512": "37e489d68b1b52db9283b1691d97745247baf85e72cb10c2278eff49f34b42e363b7ffc668beac4a9b7f0914131d4194187a42dc7b5603daf7d7de948a24f0f7",
+          "only-arches": [
+            "i386"
+          ]
+        },
+        {
+          "type": "file",
+          "path": "org.zotero.Zotero.appdata.xml"
         }
-    ]
+      ],
+      "build-commands": [
+        "mkdir -p /app/{bin,share}",
+        "cp -R . /app/share/zotero",
+        "install -D chrome/icons/default/default16.png /app/share/icons/hicolor/16x16/apps/zotero.png",
+        "install -D chrome/icons/default/default32.png /app/share/icons/hicolor/32x32/apps/zotero.png",
+        "install -D chrome/icons/default/default48.png /app/share/icons/hicolor/48x48/apps/zotero.png",
+        "install -D chrome/icons/default/default256.png /app/share/icons/hicolor/256x256/apps/zotero.png",
+        "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=zotero --set-key=Icon --set-value=org.zotero.Zotero zotero.desktop",
+        "install -D org.zotero.Zotero.appdata.xml /app/share/appdata/org.zotero.Zotero.appdata.xml",
+        "ln -s /app/share/zotero/zotero /app/bin/zotero"
+      ]
+    }
+  ]
 }
