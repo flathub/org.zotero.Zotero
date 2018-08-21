@@ -3,7 +3,7 @@ X86_64_URL=$(curl -I 'https://www.zotero.org/download/client/dl?channel=release&
 I386_URL=$(curl -I 'https://www.zotero.org/download/client/dl?channel=release&platform=linux-i686' | grep -i '^Location:' | cut -c 11- | tr -d '[:space:]')
 
 X86_64_SHA512=$(curl "$X86_64_URL" | sha512sum | cut -c -128)
-I386_SHA512=$(curl "$X86_64_URL" | sha512sum | cut -c -128)
+I386_SHA512=$(curl "$I386_URL" | sha512sum | cut -c -128)
 
 GITHUB_TAG=$(curl "$(curl https://api.github.com/repos/zotero/zotero/git/refs/tags | jq -r '.[-1].object.url')")
 VERSION=$(echo $GITHUB_TAG | jq -r '.tag')

@@ -28,7 +28,7 @@
         {
           "type": "archive",
           "url": "https://download.zotero.org/client/release/5.0.55/Zotero-5.0.55_linux-i686.tar.bz2",
-          "sha512": "37e489d68b1b52db9283b1691d97745247baf85e72cb10c2278eff49f34b42e363b7ffc668beac4a9b7f0914131d4194187a42dc7b5603daf7d7de948a24f0f7",
+          "sha512": "b761fdfe772a356007e9838f2361417795396f536f6a7bf46531d8635646bf9505689e90bdf4dfdb9b12bb5b9c7004ec9fcd628c0335f4a34baeaa712ab5259f",
           "only-arches": [
             "i386"
           ]
