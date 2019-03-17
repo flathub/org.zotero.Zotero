@@ -19,7 +19,7 @@ cat > org.zotero.Zotero.json <<EOF
 {
   "id": "org.zotero.Zotero",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.26",
+  "runtime-version": "3.30",
   "sdk": "org.gnome.Sdk",
   "command": "zotero",
   "rename-desktop-file": "zotero.desktop",
