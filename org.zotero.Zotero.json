@@ -20,7 +20,7 @@
         {
           "type": "archive",
           "url": "https://download.zotero.org/client/release/5.0.66/Zotero-5.0.66_linux-x86_64.tar.bz2",
-          "sha512": "2a58a735a1d786af0d6783c2892fdb837c4fb7e767d97ad46877b686c585b6cc731d18bb3a72d1f8d49441428a4a411388dacfc43256ed4b6bac0848d3759511",
+          "sha512": "66ddbebcdd4dff02cb634cf29f44fdedef23d718b10b98740781890764494639f7452c075c3933161b208496ffe47282e837b3c6fc681a92f1d695e8ab6da0ca",
           "only-arches": [
             "x86_64"
           ]
@@ -28,7 +28,7 @@
         {
           "type": "archive",
           "url": "https://download.zotero.org/client/release/5.0.66/Zotero-5.0.66_linux-i686.tar.bz2",
-          "sha512": "ac52fec0a0240366c3e3a534e3d26f77c9e01ce6586f175a67fad9ed040cc323b3d215ed10486930f07aae283bdf30aaddc3fd0bb1089ec2cbac7f3b035472c4",
+          "sha512": "142fc04b196d8abfd860d145177406ca95f45e2e49e34561ade3b8958f7ffa1606497512622e3a9546949b0643b0b1804b12e35030d034728e9d948b61912a0b",
           "only-arches": [
             "i386"
           ]
