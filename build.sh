@@ -105,7 +105,7 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
   <icon type="remote" height="128" width="128">https://www.zotero.org/static/images/icons/zotero-icon-128-140.png</icon>
   <icon type="remote" height="256" width="256">https://www.zotero.org/static/images/icons/zotero-icon-128-140%402x.png</icon>
   <screenshots>
-    <screenshot type="default">https://www.zotero.org/static/images/home/screenshot-1.4.png</screenshot>
+    <screenshot type="default">https://github.com/flathub/org.zotero.Zotero/raw/master/screenshots/screenshot-1.png</screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
