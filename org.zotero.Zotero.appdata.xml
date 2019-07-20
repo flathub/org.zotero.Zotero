@@ -24,7 +24,7 @@
   <launchable type="desktop-id">org.zotero.Zotero.desktop</launchable>
   <update_contact>guillaumepoiriermorency@gmail.com</update_contact>
   <releases>
-    <release version="5.0.69" date="2019-06-25"></release>
+    <release version="5.0.70" date="2019-07-13"></release>
   </releases>
   <icon type="remote" height="64" width="64">https://www.zotero.org/static/images/icons/zotero-icon-64-70.png</icon>
   <icon type="remote" height="128" width="128">https://www.zotero.org/static/images/icons/zotero-icon-128-140.png</icon>
