@@ -1,7 +1,7 @@
 {
   "id": "org.zotero.Zotero",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.32",
+  "runtime-version": "3.34",
   "sdk": "org.gnome.Sdk",
   "command": "zotero",
   "rename-desktop-file": "zotero.desktop",
