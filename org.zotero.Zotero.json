@@ -1,8 +1,8 @@
 {
   "id": "org.zotero.Zotero",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "3.32",
-  "sdk": "org.gnome.Sdk",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "19.08",
+  "sdk": "org.freedesktop.Sdk",
   "command": "zotero",
   "rename-desktop-file": "zotero.desktop",
   "rename-icon": "zotero",
@@ -13,6 +13,7 @@
     "--filesystem=home"
   ],
   "modules": [
+    "shared-modules/dbus-glib/dbus-glib-0.110.json",
     {
       "name": "zotero",
       "buildsystem": "simple",
