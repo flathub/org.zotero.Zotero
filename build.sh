@@ -18,9 +18,9 @@ EOF
 cat > org.zotero.Zotero.json <<EOF
 {
   "id": "org.zotero.Zotero",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "3.32",
-  "sdk": "org.gnome.Sdk",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "19.08",
+  "sdk": "org.freedesktop.Sdk",
   "command": "zotero",
   "rename-desktop-file": "zotero.desktop",
   "rename-icon": "zotero",
@@ -31,6 +31,7 @@ cat > org.zotero.Zotero.json <<EOF
     "--filesystem=home"
   ],
   "modules": [
+    "shared-modules/dbus-glib/dbus-glib-0.110.json",
     {
       "name": "zotero",
       "buildsystem": "simple",
@@ -74,6 +75,7 @@ EOF
 
 cat > org.zotero.Zotero.appdata.xml <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright [2006] [Corporation for Digital Scholarship] -->
 <component type="desktop-application">
   <id>org.zotero.Zotero.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -88,8 +90,8 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
     <p>
       [NOTE] If your Zotero folder is not located in the default location (~/Zotero)
       and is outside your home directory, please grant the permission to access
-      that folder by the flatpak-override command. (Usage: "flatpak override --user
-      --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero")
+      that folder by the flatpak-override command (usage: "flatpak override --user
+      --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
     </p>
   </description>
   <categories>
@@ -99,13 +101,16 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
   <launchable type="desktop-id">org.zotero.Zotero.desktop</launchable>
   <update_contact>guillaumepoiriermorency@gmail.com</update_contact>
   <releases>
-    <release version="$VERSION" date="$DATE"></release>
+    <release date="$DATE" version="$VERSION"/>
   </releases>
   <icon type="remote" height="64" width="64">https://www.zotero.org/static/images/icons/zotero-icon-64-70.png</icon>
   <icon type="remote" height="128" width="128">https://www.zotero.org/static/images/icons/zotero-icon-128-140.png</icon>
   <icon type="remote" height="256" width="256">https://www.zotero.org/static/images/icons/zotero-icon-128-140%402x.png</icon>
   <screenshots>
-    <screenshot type="default">https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/screenshot-1.png</screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/screenshot-1.png</image>
+      <caption>Zotero screenshot</caption>
+    </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
@@ -139,5 +144,15 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
   <provides>
     <id>org.zotero.Zotero</id>
   </provides>
+
+  <developer_name>Center for History and New Media at George Mason University</developer_name>
+
+  <url type="bugtracker">https://www.zotero.org/support/dev/source_code</url>
+
+  <url type="donation">https://www.zotero.org/getinvolved</url>
+
+  <url type="help">https://www.zotero.org/support/</url>
+
+  <url type="translate">https://www.zotero.org/support/dev/localization</url>
 </component>
 EOF
