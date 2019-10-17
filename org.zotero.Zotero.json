@@ -20,8 +20,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.zotero.org/client/release/5.0.75/Zotero-5.0.75_linux-x86_64.tar.bz2",
-          "sha512": "807613e6fa54099011ae620e192f3a2af7375fa7896ccd75e35c1b0edf6f42ada6d3da4f723b0dfa0be7afc7b56da0c330ff62ced6ddcd8f3a06154786c55790",
+          "url": "https://download.zotero.org/client/release/5.0.76/Zotero-5.0.76_linux-x86_64.tar.bz2",
+          "sha512": "1e4691c025169d32f22c9a45a00c90e16236e7a2b5583d12a2f0fb3722acd26e38c2486ff3d4ef83e4b2d58741b03260fcc8105a2f15f66ea4d0bdf92ab1d25d",
           "only-arches": [
             "x86_64"
           ]
