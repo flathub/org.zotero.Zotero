@@ -21,7 +21,7 @@
         {
           "type": "archive",
           "url": "https://download.zotero.org/client/release/5.0.84/Zotero-5.0.84_linux-x86_64.tar.bz2",
-          "sha512": "1c99651f58995ed4ee01268f00849353c5b1c7a342eb093edd04eb7ca4eee88258eea5b6fac9fbd5656c4f214e9190ffd6bcf2da0d92a868ce9c287a28c2f02c4",
+          "sha512": "c99651f58995ed4ee01268f00849353c5b1c7a342eb093edd04eb7ca4eee88258eea5b6fac9fbd5656c4f214e9190ffd6bcf2da0d92a868ce9c287a28c2f02c4",
           "only-arches": [
             "x86_64"
           ]
