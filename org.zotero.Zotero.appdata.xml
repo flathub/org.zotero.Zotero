@@ -13,8 +13,9 @@
     </p>
     <p>
       [NOTE] If your Zotero folder is not located in the default location (~/Zotero)
-      and is outside your home directory, please grant the permission to access
-      that folder by the flatpak-override command (usage: "flatpak override --user
+      and is outside your home directory or xdg-user-dirs (xdg-desktop, 
+      xdg-documents, xdg-download), please grant the permission to access that 
+      folder by the flatpak-override command (usage: "flatpak override --user
       --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
     </p>
   </description>
