@@ -150,7 +150,7 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
     <id>org.zotero.Zotero</id>
   </provides>
 
-  <developer_name>Center for History and New Media at George Mason University</developer_name>
+  <developer_name>The Corporation for Digital Scholarship</developer_name>
 
   <url type="bugtracker">https://www.zotero.org/support/dev/source_code</url>
 
