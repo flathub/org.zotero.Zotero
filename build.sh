@@ -28,7 +28,10 @@ cat > org.zotero.Zotero.json <<EOF
     "--socket=x11",
     "--share=ipc",
     "--share=network",
-    "--filesystem=home"
+    "--filesystem=home",
+    "--filesystem=xdg-desktop",
+    "--filesystem=xdg-documents",
+    "--filesystem=xdg-download"
   ],
   "modules": [
     "shared-modules/dbus-glib/dbus-glib-0.110.json",
@@ -66,7 +69,8 @@ cat > org.zotero.Zotero.json <<EOF
         "install -D chrome/icons/default/default256.png /app/share/icons/hicolor/256x256/apps/zotero.png",
         "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=zotero --set-key=Icon --set-value=org.zotero.Zotero zotero.desktop",
         "install -D org.zotero.Zotero.appdata.xml /app/share/appdata/org.zotero.Zotero.appdata.xml",
-        "ln -s /app/share/zotero/zotero /app/bin/zotero"
+        "ln -s /app/share/zotero/zotero /app/bin/zotero",
+        "sed -i 's/pref(\"app.update.enabled\", true);/pref(\"app.update.enabled\", false);/' /app/share/zotero/defaults/preferences/prefs.js"
       ]
     }
   ]
@@ -89,8 +93,9 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
     </p>
     <p>
       [NOTE] If your Zotero folder is not located in the default location (~/Zotero)
-      and is outside your home directory, please grant the permission to access
-      that folder by the flatpak-override command (usage: "flatpak override --user
+      and is outside your home directory or xdg-user-dirs (xdg-desktop, 
+      xdg-documents, xdg-download), please grant the permission to access that 
+      folder by the flatpak-override command (usage: "flatpak override --user
       --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
     </p>
   </description>
