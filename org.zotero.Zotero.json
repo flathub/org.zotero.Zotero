@@ -26,23 +26,6 @@
   },
   "modules": [
     "shared-modules/dbus-glib/dbus-glib.json",
-    "contrib/tesseract-flatpak/com.github.tesseract-ocr.json",
-    {
-        "name": "poppler",
-        "buildsystem": "cmake-ninja",
-        "config-opts": [
-            "-DCMAKE_INSTALL_PREFIX=/app",
-            "-DENABLE_LIBOPENJPEG=none"
-        ],
-        "cleanup": ["/include", "/lib/debug"],
-        "sources": [
-            {
-                "type": "archive",
-                "url": "https://poppler.freedesktop.org/poppler-0.88.0.tar.xz",
-                "sha256": "b4453804e9a5a519e6ceee0ac8f5efc229e3b0bf70419263c239124474d256c7"
-            }
-        ]
-    },
     {
       "name": "zotero",
       "buildsystem": "simple",
@@ -78,7 +61,6 @@
         "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value='zotero -url %U' --set-key=Icon --set-value=org.zotero.Zotero --remove-key=SingleMainWindow --set-key=X-GNOME-SingleWindow --set-value=true --add-mime-type=x-scheme-handler/zotero zotero.desktop",
         "install -D org.zotero.Zotero.appdata.xml /app/share/appdata/org.zotero.Zotero.appdata.xml",
         "ln -s /app/share/zotero/zotero /app/bin/zotero",
-        "ln -s /app/bin/pdftoppm /app/share/zotero/pdftoppm",
         "sed -i 's/pref(\"app.update.enabled\", true);/pref(\"app.update.enabled\", false);/' /app/share/zotero/defaults/preferences/prefs.js"
       ]
     }
