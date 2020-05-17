@@ -1,13 +1,5 @@
 {
-    "id": "com.github.tesseract-ocr",
-    "branch": "4.0.0",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "18.08",
-    "sdk": "org.freedesktop.Sdk",
-    "command": "tesseract",
-    "finish-args": [
-        "--filesystem=home"
-    ],
+    "name": "tesseract-ocr",
     "cleanup": [
         "/lib/debug",
         "/include"
