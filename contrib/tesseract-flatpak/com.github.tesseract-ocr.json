@@ -1,0 +1,62 @@
+{
+    "id": "com.github.tesseract-ocr",
+    "branch": "4.0.0",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "18.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "tesseract",
+    "finish-args": [
+        "--filesystem=home"
+    ],
+    "cleanup": [
+        "/lib/debug",
+        "/include"
+    ],
+    "build-options": {
+        "strip": true,
+        "no-debuginfo": true   
+    },
+    "modules": [
+        {
+            "name": "leptonica",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://www.leptonica.org/source/leptonica-1.78.0.tar.gz",
+                    "sha256": "e2ed2e81e7a22ddf45d2c05f0bc8b9ae7450545d995bfe28517ba408d14a5a88"
+                }
+            ]
+        },
+        {
+            "name": "tesseract-ocr",
+            "buildsystem": "autotools",            
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/tesseract-ocr/tesseract/archive/4.0.0.tar.gz",
+                    "sha256": "a1f5422ca49a32e5f35c54dee5112b11b99928fc9f4ee6695cdc6768d69f61dd"
+                }
+            ]
+        },
+        {
+            "name": "tesseract-traineddata",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm644 deu.traineddata /app/share/tessdata/deu.traineddata",
+                "install -Dm644 eng.traineddata /app/share/tessdata/eng.traineddata"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/master/deu.traineddata",
+                    "sha256": "19d219bbb6672c869d20a9636c6816a81eb9a71796cb93ebe0cb1530e2cdb22d"
+                },
+                {
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/master/eng.traineddata",
+                    "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+                }
+            ]
+        }
+    ]
+}
