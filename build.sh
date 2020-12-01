@@ -35,8 +35,8 @@ cat > org.zotero.Zotero.json <<EOF
     "--filesystem=xdg-pictures",
     "--filesystem=xdg-public-share",
     "--filesystem=xdg-videos",
-    "--filesystem=~/.zotero",
-    "--filesystem=~/Zotero"
+    "--persist=.zotero",
+    "--persist=Zotero"
   ],
   "modules": [
     "shared-modules/dbus-glib/dbus-glib-0.110.json",
