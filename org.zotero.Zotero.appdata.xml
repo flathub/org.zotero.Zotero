@@ -12,10 +12,9 @@
       organize, cite, and share your research sources.
     </p>
     <p>
-      [NOTE] If your Zotero folder is not located in the default location (~/Zotero)
-      and is outside your xdg-user-dirs (xdg-desktop, xdg-documents, xdg-download,
-      xdg-music, xdg-pictures, xdg-public-share, xdg-videos), please grant the
-      permission to access that folder by the flatpak-override command (usage:
+      NOTE: If your Zotero folder is not located inside your home directory (~/)
+      and is outside your xdg-user-dirs, please grant permission to access that
+      folder by the flatpak-override command (usage:
       "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
     </p>
     <p>
