@@ -28,15 +28,14 @@ cat > org.zotero.Zotero.json <<EOF
     "--socket=x11",
     "--share=ipc",
     "--share=network",
+    "--filesystem=home",
     "--filesystem=xdg-desktop",
     "--filesystem=xdg-documents",
     "--filesystem=xdg-download",
     "--filesystem=xdg-music",
     "--filesystem=xdg-pictures",
     "--filesystem=xdg-public-share",
-    "--filesystem=xdg-videos",
-    "--filesystem=~/.zotero:create",
-    "--filesystem=~/Zotero:create"
+    "--filesystem=xdg-videos"
   ],
   "modules": [
     "shared-modules/dbus-glib/dbus-glib-0.110.json",
@@ -97,10 +96,9 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
       organize, cite, and share your research sources.
     </p>
     <p>
-      [NOTE] If your Zotero folder is not located in the default location (~/Zotero)
-      and is outside your xdg-user-dirs (xdg-desktop, xdg-documents, xdg-download,
-      xdg-music, xdg-pictures, xdg-public-share, xdg-videos), please grant the
-      permission to access that folder by the flatpak-override command (usage:
+      NOTE: If your Zotero folder is not located inside your home directory (~/)
+      and is outside your xdg-user-dirs, please grant permission to access that
+      folder by the flatpak-override command (usage:
       "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
     </p>
     <p>

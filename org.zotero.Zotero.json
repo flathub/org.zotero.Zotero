@@ -10,15 +10,14 @@
     "--socket=x11",
     "--share=ipc",
     "--share=network",
+    "--filesystem=home",
     "--filesystem=xdg-desktop",
     "--filesystem=xdg-documents",
     "--filesystem=xdg-download",
     "--filesystem=xdg-music",
     "--filesystem=xdg-pictures",
     "--filesystem=xdg-public-share",
-    "--filesystem=xdg-videos",
-    "--filesystem=~/.zotero:create",
-    "--filesystem=~/Zotero:create"
+    "--filesystem=xdg-videos"
   ],
   "modules": [
     "shared-modules/dbus-glib/dbus-glib-0.110.json",
