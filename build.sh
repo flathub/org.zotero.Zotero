@@ -103,6 +103,9 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
       permission to access that folder by the flatpak-override command (usage:
       "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
     </p>
+    <p>
+      NOTE: This wrapper is not verified by, affiliated with, or supported by the Zotero project.
+    </p>
   </description>
   <categories>
     <category>Office</category>
@@ -155,7 +158,7 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
     <id>org.zotero.Zotero</id>
   </provides>
 
-  <developer_name>The Corporation for Digital Scholarship</developer_name>
+  <developer_name>Corporation for Digital Scholarship</developer_name>
 
   <url type="bugtracker">https://www.zotero.org/support/dev/source_code</url>
 
