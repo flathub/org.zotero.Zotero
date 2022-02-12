@@ -20,7 +20,7 @@
     "--filesystem=xdg-videos"
   ],
   "modules": [
-    "shared-modules/dbus-glib/dbus-glib-0.110.json",
+    "shared-modules/dbus-glib/dbus-glib.json",
     {
       "name": "zotero",
       "buildsystem": "simple",
