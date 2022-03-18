@@ -19,7 +19,7 @@ cat > org.zotero.Zotero.json <<EOF
 {
   "id": "org.zotero.Zotero",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "20.08",
+  "runtime-version": "21.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "zotero",
   "rename-desktop-file": "zotero.desktop",
@@ -38,7 +38,7 @@ cat > org.zotero.Zotero.json <<EOF
     "--filesystem=xdg-videos"
   ],
   "modules": [
-    "shared-modules/dbus-glib/dbus-glib-0.110.json",
+    "shared-modules/dbus-glib/dbus-glib.json",
     {
       "name": "zotero",
       "buildsystem": "simple",
