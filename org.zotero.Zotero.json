@@ -27,16 +27,16 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.zotero.org/client/release/6.0.8/Zotero-6.0.8_linux-x86_64.tar.bz2",
-          "sha512": "5b39d2a8aa4d3d973f74cb13a5a0feb961639cf7955b447dfff82517fc86f3ad579a0093b4f33e93c7fa974ae026e21dc0f3a320c9de318873f1d0ca0fec467b",
+          "url": "https://download.zotero.org/client/release/6.0.9/Zotero-6.0.9_linux-x86_64.tar.bz2",
+          "sha512": "4610d0e7ae8fe228ffe6ceff9cd9724bc47b8fa7b6b0d0cdac3e539b67af037aeaaeb5d7f0935306f2e6bb719ca16bcad266a576e6389674f6717b15d610643c",
           "only-arches": [
             "x86_64"
           ]
         },
         {
           "type": "archive",
-          "url": "https://download.zotero.org/client/release/6.0.8/Zotero-6.0.8_linux-i686.tar.bz2",
-          "sha512": "668ac08d602ba965af0863760365e9f3c7846ddd0c05cd3f71c91e8f884b814c97f9c46169bc1077d29002a087f7144d80414e4929ee0f4c96e3774570e124e1",
+          "url": "https://download.zotero.org/client/release/6.0.9/Zotero-6.0.9_linux-i686.tar.bz2",
+          "sha512": "4ad1a997fa255edc15540598cbc7f367d720ffb1cf193f9fbfccb007f4b1fa13eb81faa6c01d9dcbbd0b90c698d80a2768cbc431a04f3715d2a7685dab87767b",
           "only-arches": [
             "i386"
           ]
