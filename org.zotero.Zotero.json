@@ -1,7 +1,7 @@
 {
   "id": "org.zotero.Zotero",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "22.08",
+  "runtime-version": "21.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "zotero",
   "rename-desktop-file": "zotero.desktop",
@@ -27,16 +27,16 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.zotero.org/client/release/6.0.13/Zotero-6.0.13_linux-x86_64.tar.bz2",
-          "sha512": "150ad3f213ad7289e09f79422f4840a4a288d80bfe661a9c06d330198c52018efe01bc68629485fd822647902df59ec5862bee5df13d1de106a2ccd84b647944",
+          "url": "https://download.zotero.org/client/release/6.0.14/Zotero-6.0.14_linux-x86_64.tar.bz2",
+          "sha512": "6d3604ed3eb7821316ea378b92bf3bdc3e89e077fa1ccfef7e2baa4d26455f8b04d68aee3036711bf85ef97a79e6f97cc37cb9e1156320b11c6c8fe9156f5526",
           "only-arches": [
             "x86_64"
           ]
         },
         {
           "type": "archive",
-          "url": "https://download.zotero.org/client/release/6.0.13/Zotero-6.0.13_linux-i686.tar.bz2",
-          "sha512": "4bf71e788cb97497e4acb18150dc7865fe4d2e90a2d658e660c54b2312ec3939365226f30bc65f736c0b38316a238b97ddde0555ccf12b95c449d396d7872c1d",
+          "url": "https://download.zotero.org/client/release/6.0.14/Zotero-6.0.14_linux-i686.tar.bz2",
+          "sha512": "3c26ce57570946c2a62eb3631fa95c0130372144ab3d2a5ba795290031f247939d25c541c6f7e9a2f31a3478e09e2196771299bce1683232a476e31836c6bb7a",
           "only-arches": [
             "i386"
           ]
