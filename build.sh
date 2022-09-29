@@ -19,7 +19,7 @@ cat > org.zotero.Zotero.json <<EOF
 {
   "id": "org.zotero.Zotero",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "21.08",
+  "runtime-version": "22.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "zotero",
   "rename-desktop-file": "zotero.desktop",
