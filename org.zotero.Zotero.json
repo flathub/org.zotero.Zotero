@@ -1,7 +1,7 @@
 {
   "id": "org.zotero.Zotero",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "19.08",
+  "runtime-version": "23.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "zotero",
   "rename-desktop-file": "zotero.desktop",
@@ -13,10 +13,14 @@
     "--filesystem=home",
     "--filesystem=xdg-desktop",
     "--filesystem=xdg-documents",
-    "--filesystem=xdg-download"
+    "--filesystem=xdg-download",
+    "--filesystem=xdg-music",
+    "--filesystem=xdg-pictures",
+    "--filesystem=xdg-public-share",
+    "--filesystem=xdg-videos"
   ],
   "modules": [
-    "shared-modules/dbus-glib/dbus-glib-0.110.json",
+    "shared-modules/dbus-glib/dbus-glib.json",
     "contrib/tesseract-flatpak/com.github.tesseract-ocr.json",
     {
         "name": "poppler",
@@ -40,16 +44,16 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.zotero.org/client/release/5.0.86/Zotero-5.0.86_linux-x86_64.tar.bz2",
-          "sha512": "c534ca7e01a8318cc44c5ab61076f1f773c5ae6c9ef3abbd521c68197fa258b4ea452792635772626b047a136ee727824adfc1e552688e547815e993202b4875",
+          "url": "https://download.zotero.org/client/release/6.0.15/Zotero-6.0.15_linux-x86_64.tar.bz2",
+          "sha512": "f1fb30a3446f9373f9f7aa1d0a21a26dc3f1bf34f0804e2aeabc617cbd2b93b471dfbaec51c41e1745e6813ead9029e5b3c5dae199760193433c51cb7316a8c9",
           "only-arches": [
             "x86_64"
           ]
         },
         {
           "type": "archive",
-          "url": "https://download.zotero.org/client/release/5.0.86/Zotero-5.0.86_linux-i686.tar.bz2",
-          "sha512": "8bc485b8c67396aecb9b867050a5ba12d1e2d03423f51d152f2b241901b162a433125867197482378e2759fa5fd57b1070987a78ffca25add11457175c3774f0",
+          "url": "https://download.zotero.org/client/release/6.0.15/Zotero-6.0.15_linux-i686.tar.bz2",
+          "sha512": "81a994ca2932f423e13988cb3579c2e4d4e2a3aa3a21456fb351259ea8ea4467931bba12f5e5f3416f7bdebc2038dc266fa20f71eea3b62de31d0848ea975d4a",
           "only-arches": [
             "i386"
           ]
@@ -66,7 +70,7 @@
         "install -D chrome/icons/default/default32.png /app/share/icons/hicolor/32x32/apps/zotero.png",
         "install -D chrome/icons/default/default48.png /app/share/icons/hicolor/48x48/apps/zotero.png",
         "install -D chrome/icons/default/default256.png /app/share/icons/hicolor/256x256/apps/zotero.png",
-        "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=zotero --set-key=Icon --set-value=org.zotero.Zotero zotero.desktop",
+        "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value='zotero -url %U' --set-key=Icon --set-value=org.zotero.Zotero --remove-key=SingleMainWindow --set-key=X-GNOME-SingleWindow --set-value=true --add-mime-type=x-scheme-handler/zotero zotero.desktop",
         "install -D org.zotero.Zotero.appdata.xml /app/share/appdata/org.zotero.Zotero.appdata.xml",
         "ln -s /app/share/zotero/zotero /app/bin/zotero",
         "ln -s /app/bin/pdftoppm /app/share/zotero/pdftoppm",

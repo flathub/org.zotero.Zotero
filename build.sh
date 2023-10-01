@@ -19,7 +19,7 @@ cat > org.zotero.Zotero.json <<EOF
 {
   "id": "org.zotero.Zotero",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "19.08",
+  "runtime-version": "22.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "zotero",
   "rename-desktop-file": "zotero.desktop",
@@ -31,10 +31,14 @@ cat > org.zotero.Zotero.json <<EOF
     "--filesystem=home",
     "--filesystem=xdg-desktop",
     "--filesystem=xdg-documents",
-    "--filesystem=xdg-download"
+    "--filesystem=xdg-download",
+    "--filesystem=xdg-music",
+    "--filesystem=xdg-pictures",
+    "--filesystem=xdg-public-share",
+    "--filesystem=xdg-videos"
   ],
   "modules": [
-    "shared-modules/dbus-glib/dbus-glib-0.110.json",
+    "shared-modules/dbus-glib/dbus-glib.json",
     {
       "name": "zotero",
       "buildsystem": "simple",
@@ -67,7 +71,7 @@ cat > org.zotero.Zotero.json <<EOF
         "install -D chrome/icons/default/default32.png /app/share/icons/hicolor/32x32/apps/zotero.png",
         "install -D chrome/icons/default/default48.png /app/share/icons/hicolor/48x48/apps/zotero.png",
         "install -D chrome/icons/default/default256.png /app/share/icons/hicolor/256x256/apps/zotero.png",
-        "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=zotero --set-key=Icon --set-value=org.zotero.Zotero zotero.desktop",
+        "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value='zotero -url %U' --set-key=Icon --set-value=org.zotero.Zotero --remove-key=SingleMainWindow --set-key=X-GNOME-SingleWindow --set-value=true --add-mime-type=x-scheme-handler/zotero zotero.desktop",
         "install -D org.zotero.Zotero.appdata.xml /app/share/appdata/org.zotero.Zotero.appdata.xml",
         "ln -s /app/share/zotero/zotero /app/bin/zotero",
         "sed -i 's/pref(\"app.update.enabled\", true);/pref(\"app.update.enabled\", false);/' /app/share/zotero/defaults/preferences/prefs.js"
@@ -92,11 +96,13 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
       organize, cite, and share your research sources.
     </p>
     <p>
-      [NOTE] If your Zotero folder is not located in the default location (~/Zotero)
-      and is outside your home directory or xdg-user-dirs (xdg-desktop, 
-      xdg-documents, xdg-download), please grant the permission to access that 
-      folder by the flatpak-override command (usage: "flatpak override --user
-      --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
+      NOTE: If your Zotero folder is not located inside your home directory (~/)
+      and is outside your xdg-user-dirs, please grant permission to access that
+      folder by the flatpak-override command (usage:
+      "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
+    </p>
+    <p>
+      NOTE: This wrapper is not verified by, affiliated with, or supported by the Zotero project.
     </p>
   </description>
   <categories>
@@ -150,7 +156,7 @@ cat > org.zotero.Zotero.appdata.xml <<EOF
     <id>org.zotero.Zotero</id>
   </provides>
 
-  <developer_name>The Corporation for Digital Scholarship</developer_name>
+  <developer_name>Corporation for Digital Scholarship</developer_name>
 
   <url type="bugtracker">https://www.zotero.org/support/dev/source_code</url>
 
