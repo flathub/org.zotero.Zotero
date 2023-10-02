@@ -19,6 +19,11 @@
     "--filesystem=xdg-public-share",
     "--filesystem=xdg-videos"
   ],
+  "add-extensions": {
+      "org.zotero.Zotero.Extension": {
+          "directory": "share/zotero/extensions"
+      }
+  },
   "modules": [
     "shared-modules/dbus-glib/dbus-glib.json",
     "contrib/tesseract-flatpak/com.github.tesseract-ocr.json",
