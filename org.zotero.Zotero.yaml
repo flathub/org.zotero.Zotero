@@ -5,7 +5,8 @@ sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
 finish-args:
-  - --socket=x11
+  - --socket=fallback-x11
+  - --socket=wayland
   - --share=ipc
   - --share=network
   - --filesystem=home
@@ -22,16 +23,20 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/release/6.0.30/Zotero-6.0.30_linux-x86_64.tar.bz2
-        sha512: 3ad9757a038b433221c26d3a27b4a5f3ece7e481c021ca936187ea491426b3e7e4a57b17b5ea712d3e453c244e62fa1eecc6de70ac9e1d54847637642f695ddf
+        url: https://download.zotero.org/client/beta/7.0.0-beta.48%2B0cab24fb8/Zotero-7.0.0-beta.48%2B0cab24fb8_linux-x86_64.tar.bz2
+        sha512: e83e6f232b11d0d8d907bad65dc4d0312d9696d286b9f5fcfc46b5ad7f3c4e3bdd708dc0a86c869a1a9f54e00df98a849baf456e15cd4db69296b947f8770d0a
         only-arches:
           - x86_64
         x-checker-data:
           type: rotating-url
-          url: https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64
-          pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.bz2
+          url: https://www.zotero.org/download/client/dl?channel=beta&platform=linux-x86_64
+          pattern: https://download.zotero.org/client/beta/([0-9.]+-beta[0-9.]+)*
       - type: file
         path: org.zotero.Zotero.appdata.xml
+      - type: file
+        path: autoconfig.js
+      - type: file
+        path: autoconfig-flatpak.js
     build-commands:
       - mkdir -p /app/{bin,share}
       - cp -R . /app/share/zotero
@@ -44,13 +49,11 @@ modules:
         --dir=/app/share/applications
         --set-key=Exec --set-value='zotero -url %U'
         --set-key=Icon --set-value=${FLATPAK_ID}
-        --remove-key=SingleMainWindow
-        --set-key=X-GNOME-SingleWindow --set-value=true
         --add-mime-type=x-scheme-handler/zotero
         zotero.desktop
       - install -D ${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
       - ln -s /app/share/zotero/zotero /app/bin/zotero
-      - >-
-        sed -i
-        's/pref("app.update.enabled", true);/pref("app.update.enabled", false);/'
-        /app/share/zotero/defaults/preferences/prefs.js
+      # disable auto-updates
+      # https://support.mozilla.org/en-US/kb/customizing-firefox-using-autoconfig
+      - mkdir -p /app/share/zotero/defaults/pref
+      - install -D autoconfig.js /app/share/zotero/defaults/pref/autoconfig.js
