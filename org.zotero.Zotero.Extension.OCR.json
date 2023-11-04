@@ -1,0 +1,46 @@
+{
+    "id": "org.zotero.Zotero.Extension.OCR",
+    "runtime": "org.zotero.Zotero",
+    "runtime-version": "stable",
+    "sdk": "org.freedesktop.Sdk//23.08",
+    "build-extension": true,
+    "appstream-compose": false,
+    "modules": [
+        "contrib/tesseract-flatpak/com.github.tesseract-ocr.json",
+        {
+            "name": "poppler",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_INSTALL_PREFIX=/app",
+                "-DCMAKE_INSTALL_BINDIR=share/zotero",
+                "-DCMAKE_INSTALL_LIBDIR=share/zotero",
+                "-DCMAKE_INSTALL_DATAROOTDIR=share/zotero",
+                "-DENABLE_LIBOPENJPEG=none"
+            ],
+            "cleanup": ["/include", "/lib/debug"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://poppler.freedesktop.org/poppler-0.88.0.tar.xz",
+                    "sha256": "b4453804e9a5a519e6ceee0ac8f5efc229e3b0bf70419263c239124474d256c7"
+                }
+            ]
+        },
+        {
+            "name": "zotero-ocr",
+            "buildsystem": "simple",
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://github.com/UB-Mannheim/zotero-ocr/releases/download/0.3.0/zotero-ocr-0.3.0.xpi",
+                    "sha256": "ae557d31555fe427b9a720e60603000c72356aaee501f89661d13b97abfcc29f"
+                }
+            ],
+            "build-commands": [
+                "install -D /app/share/zotero/extensions/zotero-ocr-0.3.0.xpi zotero-ocr-0.3.0.xpi",
+                "ln -s /app/bin/pdftoppm /app/share/zotero/pdftoppm"
+            ]
+        }
+    ]
+}
+

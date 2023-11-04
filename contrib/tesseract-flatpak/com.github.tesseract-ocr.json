@@ -1,0 +1,54 @@
+{
+    "name": "tesseract-ocr",
+    "cleanup": [
+        "/lib/debug",
+        "/include"
+    ],
+    "build-options": {
+        "strip": true,
+        "no-debuginfo": true   
+    },
+    "modules": [
+        {
+            "name": "leptonica",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://www.leptonica.org/source/leptonica-1.79.0.tar.gz",
+                    "sha256": "045966c9c5d60ebded314a9931007a56d9d2f7a6ac39cb5cc077c816f62300d8"
+                }
+            ]
+        },
+        {
+            "name": "tesseract-ocr",
+            "buildsystem": "autotools",            
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/tesseract-ocr/tesseract/archive/4.1.1.tar.gz",
+                    "sha256": "2a66ff0d8595bff8f04032165e6c936389b1e5727c3ce5a27b3e059d218db1cb"
+                }
+            ]
+        },
+        {
+            "name": "tesseract-traineddata",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm644 deu.traineddata /app/share/tessdata/deu.traineddata",
+                "install -Dm644 eng.traineddata /app/share/tessdata/eng.traineddata"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/master/deu.traineddata",
+                    "sha256": "19d219bbb6672c869d20a9636c6816a81eb9a71796cb93ebe0cb1530e2cdb22d"
+                },
+                {
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/master/eng.traineddata",
+                    "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+                }
+            ]
+        }
+    ]
+}
