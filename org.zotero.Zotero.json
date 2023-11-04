@@ -31,7 +31,12 @@
           "sha512": "3ad9757a038b433221c26d3a27b4a5f3ece7e481c021ca936187ea491426b3e7e4a57b17b5ea712d3e453c244e62fa1eecc6de70ac9e1d54847637642f695ddf",
           "only-arches": [
             "x86_64"
-          ]
+          ],
+          "x-checker-data": {
+            "type": "rotating-url",
+            "url": "https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64",
+            "pattern": "https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.bz2"
+          }
         },
         {
           "type": "archive",
@@ -39,7 +44,12 @@
           "sha512": "2148ef94e1bb64c83b05212f19e3ee230a57c9298f4d05bc09dd34979c4b607fb49831e391aea247a32aae7673278204ef5eefbef9fe26d8a6beed7c98532a72",
           "only-arches": [
             "i386"
-          ]
+          ],
+          "x-checker-data": {
+            "type": "rotating-url",
+            "url": "https://www.zotero.org/download/client/dl?channel=release&platform=linux-i686",
+            "pattern": "https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-i686.tar.bz2"
+          }
         },
         {
           "type": "file",
