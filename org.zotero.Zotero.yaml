@@ -1,6 +1,6 @@
 id: org.zotero.Zotero
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
@@ -23,8 +23,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/beta/7.0.0-beta.54%2B6b996d4f9/Zotero-7.0.0-beta.54%2B6b996d4f9_linux-x86_64.tar.bz2
-        sha512: 01d8cf777e2dfaa41a30c227ea0342f0df112c9448ecda44c81700041f1f5d4ed5561692ce2d88659847156993cff4b0a10683a3441d6b5629984e4be646cb39
+        url: https://download.zotero.org/client/beta/7.0.0-beta.55%2B9151fb355/Zotero-7.0.0-beta.55%2B9151fb355_linux-x86_64.tar.bz2
+        sha512: 3469aed6dfbf6f49f58fedf33fb68c7c3ffe6874458c8c0294339e966c0b4c6ffb110378c284abc93de124839065f19afd0653d5acdeaafa328304cd1e8d5ca0
         only-arches:
           - x86_64
         x-checker-data:
@@ -40,10 +40,8 @@ modules:
     build-commands:
       - mkdir -p /app/{bin,share}
       - cp -R . /app/share/zotero
-      - install -D chrome/icons/default/default16.png /app/share/icons/hicolor/16x16/apps/${FLATPAK_ID}.png
-      - install -D chrome/icons/default/default32.png /app/share/icons/hicolor/32x32/apps/${FLATPAK_ID}.png
-      - install -D chrome/icons/default/default48.png /app/share/icons/hicolor/48x48/apps/${FLATPAK_ID}.png
-      - install -D chrome/icons/default/default256.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+      - install -D icons/icon128.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
+      - install -D icons/symbolic.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - >-
         desktop-file-install
         --dir=/app/share/applications
