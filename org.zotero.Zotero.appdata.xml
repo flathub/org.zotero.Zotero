@@ -33,6 +33,7 @@
   <developer_name>Corporation for Digital Scholarship</developer_name>
   <update_contact>guillaumepoiriermorency@gmail.com</update_contact>
   <releases>
+    <release version="7.0.0-beta.58" date="2024-02-06"/>
     <release version="7.0.0-beta.57" date="2024-02-02"/>
     <release version="7.0.0-beta.56" date="2024-01-29"/>
     <release version="7.0.0-beta.55" date="2024-01-25"/>
