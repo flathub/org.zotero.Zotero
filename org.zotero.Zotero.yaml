@@ -1,6 +1,6 @@
 id: org.zotero.Zotero
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
@@ -17,6 +17,9 @@ finish-args:
   - --filesystem=xdg-pictures
   - --filesystem=xdg-public-share
   - --filesystem=xdg-videos
+cleanup:
+  - /share/zotero/${FLATPAK_ID}.appdata.xml
+  - /share/zotero/policies.json
 modules:
   - shared-modules/dbus-glib/dbus-glib.json
   - name: zotero
@@ -34,9 +37,7 @@ modules:
       - type: file
         path: org.zotero.Zotero.appdata.xml
       - type: file
-        path: autoconfig.js
-      - type: file
-        path: autoconfig-flatpak.js
+        path: policies.json
     build-commands:
       - mkdir -p /app/{bin,share}
       - cp -R . /app/share/zotero
@@ -54,6 +55,7 @@ modules:
       - install -D ${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
       - ln -s /app/share/zotero/zotero /app/bin/zotero
       # disable auto-updates
-      # https://support.mozilla.org/en-US/kb/customizing-firefox-using-autoconfig
-      - mkdir -p /app/share/zotero/defaults/pref
-      - install -D autoconfig.js /app/share/zotero/defaults/pref/autoconfig.js
+      # https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson
+      # https://mozilla.github.io/policy-templates/#disableappupdate
+      - mkdir -p /app/share/zotero/distribution
+      - install -D policies.json /app/share/zotero/distribution/policies.json
