@@ -5,7 +5,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>AGPL-3.0</project_license>
   <name>Zotero</name>
-  <summary>Collect, organize, cite, and share research</summary>
+  <summary>Collect, organize and cite research</summary>
   <description>
     <p>
       Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect,
@@ -18,7 +18,7 @@
       "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
     </p>
     <p>
-      NOTE: This wrapper is not verified by, affiliated with, or supported by the Zotero project.
+      NOTE: This flatpak is not verified by, affiliated with, or supported by the Zotero project.
     </p>
   </description>
   <categories>
@@ -30,7 +30,9 @@
   <url type="help">https://www.zotero.org/support/</url>
   <url type="translate">https://www.zotero.org/support/dev/localization</url>
   <launchable type="desktop-id">org.zotero.Zotero.desktop</launchable>
-  <developer_name>Corporation for Digital Scholarship</developer_name>
+  <developer id="org.digitalscholar">
+    <name>Corporation for Digital Scholarship</name>
+  </developer>
   <update_contact>guillaumepoiriermorency@gmail.com</update_contact>
   <releases>
     <release version="6.0.35" date="2024-03-04"/>
