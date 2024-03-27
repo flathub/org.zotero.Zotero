@@ -12,6 +12,18 @@
       organize, cite, and share your research sources.
     </p>
     <p>
+      NOTE: The user home permission is provided for compatiblity purpose.
+      Because zotero 7 supports portal file chooser, home access permission can be safely removed as follows:
+      <ol>
+        <li>move folders "~/.zotero" and "~/Zotero" to the app sandbox, typically in "~/.var/app/org.zotero.Zotero/".</li>
+        <li>remove home access premission in [flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal)</li>
+        <li>restart zotero 7</li>
+      </ol>
+      The drag and drop functionality might break after rejecting the permission for home directory,
+      please use file chooser instead, or grant permission to the drag and drop location via 
+      "flatpak override --user --filesystem=/PATH/TO/DragAndDrop org.zotero.Zotero" or [flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal).
+    </p>
+    <p>
       NOTE: If your Zotero folder is not located inside your home directory (~/)
       and is outside your xdg-user-dirs, please grant permission to access that
       folder by the flatpak-override command (usage:
