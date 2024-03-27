@@ -11,11 +11,22 @@
       Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect,
       organize, cite, and share your research sources.
     </p>
+     <p>
+      NOTE: drag and drop file/extensions might not work by default.
+      Use "install extension by file", "import file", or "import" option 
+      to install extensions or import files. 
+      In order for drag and drop to work, zotero needs permission to access the folder 
+      to drag and drop from, use [flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal)
+      or "flatpak override --user --filesystem=/PATH/TO/DragAndDrop org.zotero.Zotero"
+      to add such permission.
+    </p>
     <p>
-      NOTE: If your Zotero folder is not located inside your home directory (~/)
-      and is outside your xdg-user-dirs, please grant permission to access that
+      NOTE: by default, the Zotero folders will appear in "~/.var/app/org.zotero.Zotero/".
+      If your Zotero folder is not located elsewhere,
+      please grant permission to access that
       folder by the flatpak-override command (usage:
-      "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
+      "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero" 
+      or use [flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal)).
     </p>
     <p>
       NOTE: This wrapper is not verified by, affiliated with, or supported by the Zotero project.

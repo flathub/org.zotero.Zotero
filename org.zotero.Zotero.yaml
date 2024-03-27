@@ -9,14 +9,8 @@ finish-args:
   - --socket=wayland
   - --share=ipc
   - --share=network
-  - --filesystem=home
-  - --filesystem=xdg-desktop
-  - --filesystem=xdg-documents
-  - --filesystem=xdg-download
-  - --filesystem=xdg-music
-  - --filesystem=xdg-pictures
-  - --filesystem=xdg-public-share
-  - --filesystem=xdg-videos
+  - --persist=.zotero
+  - --persist=Zotero
 cleanup:
   - /share/zotero/${FLATPAK_ID}.appdata.xml
   - /share/zotero/policies.json
