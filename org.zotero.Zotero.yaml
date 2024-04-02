@@ -10,13 +10,13 @@ finish-args:
   - --share=ipc
   - --share=network
   - --filesystem=home
-  - --filesystem=xdg-desktop
-  - --filesystem=xdg-documents
-  - --filesystem=xdg-download
-  - --filesystem=xdg-music
-  - --filesystem=xdg-pictures
-  - --filesystem=xdg-public-share
-  - --filesystem=xdg-videos
+  - --persist=.zotero
+  - --persist=Zotero
+  # below file permission can be removed with minimal impact on usability, 
+  # we keep these permissions to preserve the functionality of the unsandboxed version
+  # See: https://github.com/flathub/org.zotero.Zotero/issues/82
+  # and the app description for details.
+  - --filesystem=home
 cleanup:
   - /share/zotero/${FLATPAK_ID}.appdata.xml
   - /share/zotero/policies.json
