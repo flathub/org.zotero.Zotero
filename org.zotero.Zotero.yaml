@@ -26,8 +26,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/beta/7.0.0-beta.92%2Bd5bb667fb/Zotero-7.0.0-beta.92%2Bd5bb667fb_linux-x86_64.tar.bz2
-        sha512: 9809dbd9aa09c64d87159e6955c6f749a62ae7141df6bf6d2129a265c086e97c5ea6d3ea0a96e4143f788b5355e313495c249649111f944f3129e47888d5ee62
+        url: https://download.zotero.org/client/beta/7.0.0-beta.93%2B4866c467d/Zotero-7.0.0-beta.93%2B4866c467d_linux-x86_64.tar.bz2
+        sha512: 532f2c6e76b20ac6fa8b44e7e728df9fdb3b43096c106d5111c2fe02ca18f942129093e42c367077a47c63ddf8eb389549b7936a20a9e2cffc6e567c143555ca
         only-arches:
           - x86_64
         x-checker-data:
