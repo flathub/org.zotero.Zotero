@@ -1,29 +1,33 @@
 id: org.zotero.Zotero
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
 finish-args:
-  - --socket=x11
+  - --socket=fallback-x11
+  - --socket=wayland
   - --share=ipc
   - --share=network
   - --filesystem=home
-  - --filesystem=xdg-desktop
-  - --filesystem=xdg-documents
-  - --filesystem=xdg-download
-  - --filesystem=xdg-music
-  - --filesystem=xdg-pictures
-  - --filesystem=xdg-public-share
-  - --filesystem=xdg-videos
+  - --persist=.zotero
+  - --persist=Zotero
+  # below file permission can be removed with minimal impact on usability,
+  # we keep these permissions to preserve the functionality of the unsandboxed version
+  # See: https://github.com/flathub/org.zotero.Zotero/issues/82
+  # and the app description for details.
+  - --filesystem=home
+cleanup:
+  - /share/zotero/${FLATPAK_ID}.appdata.xml
+  - /share/zotero/policies.json
 modules:
   - shared-modules/dbus-glib/dbus-glib.json
   - name: zotero
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/release/6.0.35/Zotero-6.0.35_linux-x86_64.tar.bz2
-        sha512: f74574ecddba45c15f4cb61015969af0bdbc594e8f7f7707d6e5d6f6f74dca839b1f71cada2f5c66b530da28719a832ed0cc93c0684e948e17591a46fde50297
+        url: https://download.zotero.org/client/release/7.0/Zotero-7.0_linux-x86_64.tar.bz2
+        sha512: dd2b1484ae99da841558067e83898e57ad210a9b16c099e944aea81b9fcaf760484c7f98664b150c9811907c9e30b814e8ff6345ee9e04b7eb38c07106bdc849
         only-arches:
           - x86_64
         x-checker-data:
@@ -32,25 +36,26 @@ modules:
           pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.bz2
       - type: file
         path: org.zotero.Zotero.appdata.xml
+      - type: file
+        path: policies.json
     build-commands:
       - mkdir -p /app/{bin,share}
       - cp -R . /app/share/zotero
-      - install -D chrome/icons/default/default16.png /app/share/icons/hicolor/16x16/apps/${FLATPAK_ID}.png
-      - install -D chrome/icons/default/default32.png /app/share/icons/hicolor/32x32/apps/${FLATPAK_ID}.png
-      - install -D chrome/icons/default/default48.png /app/share/icons/hicolor/48x48/apps/${FLATPAK_ID}.png
-      - install -D chrome/icons/default/default256.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+      - install -D icons/icon32.png /app/share/icons/hicolor/32x32/apps/${FLATPAK_ID}.png
+      - install -D icons/icon64.png /app/share/icons/hicolor/64x64/apps/${FLATPAK_ID}.png
+      - install -D icons/icon128.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
+      - install -D icons/symbolic.svg /app/share/icons/hicolor/symbolic/apps/${FLATPAK_ID}.svg
       - >-
         desktop-file-install
         --dir=/app/share/applications
         --set-key=Exec --set-value='zotero -url %U'
         --set-key=Icon --set-value=${FLATPAK_ID}
-        --remove-key=SingleMainWindow
-        --set-key=X-GNOME-SingleWindow --set-value=true
         --add-mime-type=x-scheme-handler/zotero
         zotero.desktop
       - install -D ${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
       - ln -s /app/share/zotero/zotero /app/bin/zotero
-      - >-
-        sed -i
-        's/pref("app.update.enabled", true);/pref("app.update.enabled", false);/'
-        /app/share/zotero/defaults/preferences/prefs.js
+      # disable auto-updates
+      # https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson
+      # https://mozilla.github.io/policy-templates/#disableappupdate
+      - mkdir -p /app/share/zotero/distribution
+      - install -D policies.json /app/share/zotero/distribution/policies.json
