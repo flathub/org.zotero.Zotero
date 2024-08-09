@@ -5,11 +5,23 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>AGPL-3.0</project_license>
   <name>Zotero</name>
-  <summary>Collect, organize and cite research</summary>
+  <summary>Collect, organize, cite, and share research</summary>
   <description>
     <p>
       Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect,
       organize, cite, and share your research sources.
+    </p>
+    <p>
+      NOTE: The user home permission is provided for compatiblity purpose.
+      Because zotero 7 supports portal file chooser, home access permission can be safely removed as follows:
+      First, move folders "~/.zotero" and "~/Zotero" to the app sandbox, typically in "~/.var/app/org.zotero.Zotero/";
+      then, remove home access premission in flatseal, KDE setting, 
+      or use command "flatpak override --user --nofilesystem=home org.zotero.Zotero"; and restart zotero.
+    </p>
+    <p>
+      The drag and drop functionality might break after rejecting the permission for home directory,
+      please use file chooser instead, or grant permission to the drag and drop location via 
+      "flatpak override --user --filesystem=/PATH/TO/DragAndDrop org.zotero.Zotero" or flatseal.
     </p>
     <p>
       NOTE: If your Zotero folder is not located inside your home directory (~/)
@@ -18,7 +30,7 @@
       "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
     </p>
     <p>
-      NOTE: This flatpak is not verified by, affiliated with, or supported by the Zotero project.
+      NOTE: This wrapper is not verified by, affiliated with, or supported by the Zotero project.
     </p>
   </description>
   <categories>
@@ -30,11 +42,12 @@
   <url type="help">https://www.zotero.org/support/</url>
   <url type="translate">https://www.zotero.org/support/dev/localization</url>
   <launchable type="desktop-id">org.zotero.Zotero.desktop</launchable>
-  <developer id="org.digitalscholar">
-    <name>Corporation for Digital Scholarship</name>
-  </developer>
+  <developer_name>Corporation for Digital Scholarship</developer_name>
   <update_contact>guillaumepoiriermorency@gmail.com</update_contact>
   <releases>
+    <release version="7.0" date="2024-08-09">
+      <description></description>
+    </release>
     <release version="6.0.35" date="2024-03-04"/>
     <release date="2023-11-02" version="6.0.30"/>
   </releases>
