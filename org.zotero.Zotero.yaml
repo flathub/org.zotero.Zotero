@@ -1,6 +1,6 @@
 id: org.zotero.Zotero
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
@@ -26,8 +26,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/release/7.0/Zotero-7.0_linux-x86_64.tar.bz2
-        sha512: dd2b1484ae99da841558067e83898e57ad210a9b16c099e944aea81b9fcaf760484c7f98664b150c9811907c9e30b814e8ff6345ee9e04b7eb38c07106bdc849
+        url: https://download.zotero.org/client/release/7.0.2/Zotero-7.0.2_linux-x86_64.tar.bz2
+        sha512: e4d74769d56b6aa0757ab3d70777fd99087fd4b4e59a1eafb3fc1a5e1038c820b9caf105af9c0eb5cf9de0808e5e4920b8b530192a1677a914ea0d0dac4825f7
         only-arches:
           - x86_64
         x-checker-data:
