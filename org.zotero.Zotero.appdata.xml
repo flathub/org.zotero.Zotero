@@ -12,11 +12,15 @@
       organize, cite, and share your research sources.
     </p>
     <p>
+      NOTE: This wrapper is not verified by, affiliated with, or supported by the Zotero project.
+      Please confirm that problems are reproducible using the official tarball before reporting in the Zotero Forums.
+    </p>
+    <p>
       NOTE: The user home permission is provided for compatiblity purpose.
-      Because zotero 7 supports portal file chooser, home access permission can be safely removed as follows:
+      Home access permission can be safely removed as follows:
       First, move folders "~/.zotero" and "~/Zotero" to the app sandbox, typically in "~/.var/app/org.zotero.Zotero/";
-      then, remove home access premission in flatseal, KDE setting, 
-      or use command "flatpak override --user --nofilesystem=home org.zotero.Zotero"; and restart zotero.
+      then, remove home access premission in flatseal, Plasma settings, 
+      or with the command "flatpak override --user --nofilesystem=home org.zotero.Zotero"; and restart zotero.
     </p>
     <p>
       The drag and drop functionality might break after rejecting the permission for home directory,
@@ -24,20 +28,15 @@
       "flatpak override --user --filesystem=/PATH/TO/DragAndDrop org.zotero.Zotero" or flatseal.
     </p>
     <p>
-      NOTE: If your Zotero folder is not located inside your home directory (~/)
-      and is outside your xdg-user-dirs, please grant permission to access that
-      folder by the flatpak-override command (usage:
-      "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero").
-    </p>
-    <p>
-      NOTE: This wrapper is not verified by, affiliated with, or supported by the Zotero project.
+      NOTE: If your Zotero folder is not located inside your home directory, please grant permission to access that
+      folder via "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero".
     </p>
   </description>
   <categories>
     <category>Office</category>
   </categories>
   <url type="homepage">https://www.zotero.org/</url>
-  <url type="bugtracker">https://www.zotero.org/support/dev/source_code</url>
+  <url type="bugtracker">https://github.com/flathub/org.zotero.Zotero/issues</url>
   <url type="donation">https://www.zotero.org/getinvolved</url>
   <url type="help">https://www.zotero.org/support/</url>
   <url type="translate">https://www.zotero.org/support/dev/localization</url>
