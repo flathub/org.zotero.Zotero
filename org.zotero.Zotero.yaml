@@ -1,6 +1,6 @@
 id: org.zotero.Zotero
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
@@ -9,7 +9,6 @@ finish-args:
   - --socket=wayland
   - --share=ipc
   - --share=network
-  - --filesystem=home
   - --persist=.zotero
   - --persist=Zotero
   # below file permission can be removed with minimal impact on usability,
