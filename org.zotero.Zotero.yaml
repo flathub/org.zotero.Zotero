@@ -5,12 +5,14 @@ sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
 finish-args:
-  - --socket=fallback-x11
-  - --socket=wayland
-  - --share=ipc
-  - --share=network
+  - --device=dri
   - --persist=.zotero
   - --persist=Zotero
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --talk-name=org.mozilla.zotero.*
   # below file permission can be removed with minimal impact on usability,
   # we keep these permissions to preserve the functionality of the unsandboxed version
   # See: https://github.com/flathub/org.zotero.Zotero/issues/82
