@@ -12,7 +12,7 @@ finish-args:
   - --share=network
   - --socket=fallback-x11
   - --socket=wayland
-  - --talk-name=org.mozilla.zotero.*
+  - --own-name=org.mozilla.zotero.*
   # below file permission can be removed with minimal impact on usability,
   # we keep these permissions to preserve the functionality of the unsandboxed version
   # See: https://github.com/flathub/org.zotero.Zotero/issues/82
