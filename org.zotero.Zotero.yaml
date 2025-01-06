@@ -1,18 +1,19 @@
 id: org.zotero.Zotero
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
 finish-args:
-  - --socket=fallback-x11
-  - --socket=wayland
-  - --share=ipc
-  - --share=network
-  - --filesystem=home
+  - --device=dri
   - --persist=.zotero
   - --persist=Zotero
-  # below file permission can be removed with minimal impact on usability, 
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --own-name=org.mozilla.zotero.*
+  # below file permission can be removed with minimal impact on usability,
   # we keep these permissions to preserve the functionality of the unsandboxed version
   # See: https://github.com/flathub/org.zotero.Zotero/issues/82
   # and the app description for details.
@@ -26,8 +27,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/beta/7.0.0-beta.114%2Bd869d7898/Zotero-7.0.0-beta.114%2Bd869d7898_linux-x86_64.tar.bz2
-        sha512: 07a4e9a20db709d4a012624d0fde0c91d3847c51d16526d561c82e89bcea2ca85218813cf33f4a1c8bfd8f3e626ab7f995e87004cc009ad3e3c59757fec187fb
+        url: https://download.zotero.org/client/beta/7.0.12-beta.1%2B31bbf2acf/Zotero-7.0.12-beta.1%2B31bbf2acf_linux-x86_64.tar.bz2
+        sha512: f2bd2da7ce5c484e6311bceb7c55df0aa361eaabba1b80a1447a53218242fcb84b09fd4b8a8b9eaa6a4247959f38ac54cbde40b0adfe8ea585bf6a988ed378c9
         only-arches:
           - x86_64
         x-checker-data:
@@ -38,13 +39,20 @@ modules:
         path: org.zotero.Zotero.appdata.xml
       - type: file
         path: policies.json
+      # extracted from https://github.com/zotero/zotero/blob/main/app/mac/Contents/Resources/zotero.icns
+      - type: file
+        path: 256x256.png
+      - type: file
+        path: 512x512.png
     build-commands:
       - mkdir -p /app/{bin,share}
       - cp -R . /app/share/zotero
       - install -D icons/icon32.png /app/share/icons/hicolor/32x32/apps/${FLATPAK_ID}.png
       - install -D icons/icon64.png /app/share/icons/hicolor/64x64/apps/${FLATPAK_ID}.png
       - install -D icons/icon128.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
-      - install -D icons/symbolic.svg /app/share/icons/hicolor/symbolic/apps/${FLATPAK_ID}.svg
+      - install -D 256x256.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+      - install -D 512x512.png /app/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
+      # - install -D icons/symbolic.svg /app/share/icons/hicolor/symbolic/apps/${FLATPAK_ID}.svg
       - >-
         desktop-file-install
         --dir=/app/share/applications
