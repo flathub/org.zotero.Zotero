@@ -27,14 +27,14 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/release/7.0.11/Zotero-7.0.11_linux-x86_64.tar.bz2
-        sha512: ec69ba264a3bf05a579057122738a38316f7de43ce46229d3b6ef6b13c4a43b01d647179206b46a1c46d5e093579f81dc875d022675d167ad7e023ac7558f806
+        url: https://download.zotero.org/client/beta/7.0.12-beta.1%2B31bbf2acf/Zotero-7.0.12-beta.1%2B31bbf2acf_linux-x86_64.tar.bz2
+        sha512: f2bd2da7ce5c484e6311bceb7c55df0aa361eaabba1b80a1447a53218242fcb84b09fd4b8a8b9eaa6a4247959f38ac54cbde40b0adfe8ea585bf6a988ed378c9
         only-arches:
           - x86_64
         x-checker-data:
           type: rotating-url
-          url: https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64
-          pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.bz2
+          url: https://www.zotero.org/download/client/dl?channel=beta&platform=linux-x86_64
+          pattern: https://download.zotero.org/client/beta/([0-9.]+-beta[0-9.]+)*
       - type: file
         path: org.zotero.Zotero.appdata.xml
       - type: file
