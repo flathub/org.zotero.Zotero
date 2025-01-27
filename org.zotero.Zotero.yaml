@@ -10,8 +10,7 @@ finish-args:
   - --persist=Zotero
   - --share=ipc
   - --share=network
-  - --socket=fallback-x11
-  - --socket=wayland
+  - --socket=x11 # LibreOffice integration is broken on wayland
   - --own-name=org.mozilla.zotero.*
   # below file permission can be removed with minimal impact on usability,
   # we keep these permissions to preserve the functionality of the unsandboxed version
