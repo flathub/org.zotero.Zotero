@@ -44,8 +44,11 @@
   <developer_name>Corporation for Digital Scholarship</developer_name>
   <update_contact>guillaumepoiriermorency@gmail.com</update_contact>
   <releases>
-    <release version="7.0.19" date="2025-06-26">
+    <release version="7.0.20" date="2025-07-09">
       <description></description>
+    </release>
+    <release version="7.0.19" date="2025-06-26">
+      <description/>
     </release>
     <release version="7.0.18" date="2025-06-26">
       <description/>
