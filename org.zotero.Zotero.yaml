@@ -35,6 +35,15 @@ modules:
           type: rotating-url
           url: https://www.zotero.org/download/client/dl?channel=beta&platform=linux-x86_64
           pattern: https://download.zotero.org/client/beta/([0-9.]+-beta[0-9.]+)*
+      - type: archive
+        url: https://download.zotero.org/client/beta/8.0-beta.2%2B2bff6541f/Zotero-8.0-beta.2%2B2bff6541f_linux-arm64.tar.xz
+        sha512: d7baae9e9e301a2964e2ed3c2c24d660e574852a04af6c828d063d10b609de4ca575e84404eaa2e23cffc739bcdeb6f391373420f36ebe60a9ee8a0a5960b8b8
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: rotating-url
+          url: https://www.zotero.org/download/client/dl?channel=beta&platform=linux-arm64
+          pattern: https://download.zotero.org/client/beta/([0-9.]+-beta[0-9.]+)*
       - type: file
         path: org.zotero.Zotero.appdata.xml
       - type: file
