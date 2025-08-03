@@ -6,6 +6,7 @@ command: zotero
 rename-desktop-file: zotero.desktop
 finish-args:
   - --device=dri
+  - --env=MOZ_APP_REMOTINGNAME=org.zotero.Zotero
   - --persist=.zotero
   - --persist=Zotero
   - --share=ipc
