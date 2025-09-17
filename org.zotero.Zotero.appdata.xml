@@ -105,8 +105,20 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/screenshot-1.png</image>
-      <caption>Zotero screenshot</caption>
+      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/01-overview-light.png</image>
+      <caption>Zotero main window</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/02-reader-light.png</image>
+      <caption>Zotero built-in PDF reader</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/01-overview-dark.png</image>
+      <caption>Zotero main window, dark mode</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/02-reader-dark.png</image>
+      <caption>Zotero built-in PDF reader, dark mode</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
