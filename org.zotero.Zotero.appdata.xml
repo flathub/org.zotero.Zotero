@@ -23,9 +23,11 @@
       or with the command "flatpak override --user --nofilesystem=home org.zotero.Zotero"; and restart zotero.
     </p>
     <p>
-      The drag and drop functionality might break after rejecting the permission for home directory,
-      please use file chooser instead, or grant permission to the drag and drop location via 
-      "flatpak override --user --filesystem=/PATH/TO/DragAndDrop org.zotero.Zotero" or flatseal.
+      NOTE: Drag-and-drop functionality might stop working if you remove home directory permissions using the command above.
+      In that case, you can use the 'Add Attachment' button and manually select the files to achieve the same effect.
+      Alternatively, you may give zotero access to only the directories you want to drag-and-drop from, while keeping the rest of
+      your home directory locked away. For example, if want to give read access to your downloads directory, you can use
+      "flatpak override --user --filesystem=~/Downloads:ro org.zotero.Zotero".
     </p>
     <p>
       NOTE: If your Zotero folder is not located inside your home directory, please grant permission to access that
