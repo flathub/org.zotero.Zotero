@@ -23,9 +23,11 @@
       or with the command "flatpak override --user --nofilesystem=home org.zotero.Zotero"; and restart zotero.
     </p>
     <p>
-      The drag and drop functionality might break after rejecting the permission for home directory,
-      please use file chooser instead, or grant permission to the drag and drop location via 
-      "flatpak override --user --filesystem=/PATH/TO/DragAndDrop org.zotero.Zotero" or flatseal.
+      NOTE: Drag-and-drop functionality might stop working if you remove home directory permissions using the command above.
+      In that case, you can use the 'Add Attachment' button and manually select the files to achieve the same effect.
+      Alternatively, you may give zotero access to only the directories you want to drag-and-drop from, while keeping the rest of
+      your home directory locked away. For example, if want to give read access to your downloads directory, you can use
+      "flatpak override --user --filesystem=~/Downloads:ro org.zotero.Zotero".
     </p>
     <p>
       NOTE: If your Zotero folder is not located inside your home directory, please grant permission to access that
@@ -34,7 +36,12 @@
   </description>
   <categories>
     <category>Office</category>
+    <category>Science</category>
   </categories>
+  <branding>
+    <color type="primary" scheme_preference="light">#cc2936</color>
+    <color type="primary" scheme_preference="dark">#fd6263</color>
+  </branding>
   <url type="homepage">https://www.zotero.org/</url>
   <url type="bugtracker">https://github.com/flathub/org.zotero.Zotero/issues</url>
   <url type="donation">https://www.zotero.org/getinvolved</url>
@@ -112,8 +119,20 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/screenshot-1.png</image>
-      <caption>Zotero screenshot</caption>
+      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/01-overview-light.png</image>
+      <caption>Zotero main window</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/02-reader-light.png</image>
+      <caption>Zotero built-in PDF reader</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/03-overview-dark.png</image>
+      <caption>Zotero main window, dark mode</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.zotero.Zotero/master/screenshots/04-reader-dark.png</image>
+      <caption>Zotero built-in PDF reader, dark mode</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
