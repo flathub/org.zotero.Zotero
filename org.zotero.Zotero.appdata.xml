@@ -37,6 +37,10 @@
   <categories>
     <category>Office</category>
   </categories>
+  <branding>
+    <color type="primary" scheme_preference="light">#cc2936</color>
+    <color type="primary" scheme_preference="dark">#fd6263</color>
+  </branding>
   <url type="homepage">https://www.zotero.org/</url>
   <url type="bugtracker">https://github.com/flathub/org.zotero.Zotero/issues</url>
   <url type="donation">https://www.zotero.org/getinvolved</url>
