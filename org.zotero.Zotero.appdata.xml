@@ -7,32 +7,18 @@
   <name>Zotero</name>
   <summary>Collect, organize, cite, and share research</summary>
   <description>
-    <p>
-      Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect,
-      organize, cite, and share your research sources.
-    </p>
-    <p>
-      NOTE: This wrapper is not verified by, affiliated with, or supported by the Zotero project.
-      Please confirm that problems are reproducible using the official tarball before reporting in the Zotero Forums.
-    </p>
-    <p>
-      NOTE: The user home permission is provided for compatiblity purpose.
-      Home access permission can be safely removed as follows:
-      First, move folders "~/.zotero" and "~/Zotero" to the app sandbox, typically in "~/.var/app/org.zotero.Zotero/";
-      then, remove home access premission in flatseal, Plasma settings, 
-      or with the command "flatpak override --user --nofilesystem=home org.zotero.Zotero"; and restart zotero.
-    </p>
-    <p>
-      NOTE: Drag-and-drop functionality might stop working if you remove home directory permissions using the command above.
-      In that case, you can use the 'Add Attachment' button and manually select the files to achieve the same effect.
-      Alternatively, you may give zotero access to only the directories you want to drag-and-drop from, while keeping the rest of
-      your home directory locked away. For example, if want to give read access to your downloads directory, you can use
-      "flatpak override --user --filesystem=~/Downloads:ro org.zotero.Zotero".
-    </p>
-    <p>
-      NOTE: If your Zotero folder is not located inside your home directory, please grant permission to access that
-      folder via "flatpak override --user --filesystem=/PATH/TO/ZOTEROFOLDER org.zotero.Zotero".
-    </p>
+    <p>**This wrapper is not verified by, affiliated with, or supported by the Zotero project.**</p>
+    <p>**Please report issues with this Flatpak in the manifest issue tracker instead of the Zotero Forums.**</p>
+    <p>Zotero is a tool for managing references and research materials. It helps to collect bibliographic data, organize files, and generate citations in a wide range of formats.</p>
+    <p>Main Features:</p>
+    <ul>
+      <li>Save references and metadata directly from library catalogs, databases and websites using the Zotero browser connector.</li>
+      <li>Organize books, articles, and web pages and attach notes, tags, and files.</li>
+      <li>Annotate PDF, EPUB and HTML files with the integrated readers.</li>
+      <li>Create citations and bibliographies in popular office suites using thousands of available citation styles.</li>
+      <li>Import and export in common formats such as BibTeX, RIS, EndNote and Wikipedia Citation Templates.</li>
+      <li>Extend the built-in functionality using plugins.</li>
+    </ul>
   </description>
   <categories>
     <category>Office</category>
