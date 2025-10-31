@@ -54,6 +54,9 @@ modules:
         path: 256x256.png
       - type: file
         path: 512x512.png
+      - type: patch
+        path: zotero-calldir.patch
+        strip-components: 0
     build-commands:
       - mkdir -p /app/{bin,share}
       - cp -R . /app/share/zotero
