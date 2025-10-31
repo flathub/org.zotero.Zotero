@@ -66,6 +66,7 @@ modules:
       - >-
         desktop-file-install
         --dir=/app/share/applications
+        --set-key=Categories --set-value='Office;Science;'
         --set-key=Exec --set-value='zotero -url %U'
         --set-key=Icon --set-value=${FLATPAK_ID}
         --add-mime-type=x-scheme-handler/zotero
