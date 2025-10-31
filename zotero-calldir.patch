@@ -1,0 +1,9 @@
+--- zotero	2025-10-31 08:57:31.382625497 +0100
++++ zotero-flatpak.sh	2025-10-31 08:59:00.077944256 +0100
+@@ -16,5 +16,5 @@
+ # Use wayland backend when available
+ export MOZ_ENABLE_WAYLAND=1
+ 
+-CALLDIR="$(dirname "$(readlink -f "$0")")"
++CALLDIR="/app/share/zotero"
+ "$CALLDIR/zotero-bin" -app "$CALLDIR/app/application.ini" "$@"
