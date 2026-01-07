@@ -33,6 +33,7 @@
   <url type="donation">https://www.zotero.org/getinvolved</url>
   <url type="help">https://www.zotero.org/support/</url>
   <url type="translate">https://www.zotero.org/support/dev/localization</url>
+  <url type="vcs-browser">https://github.com/zotero/zotero</url>
   <launchable type="desktop-id">org.zotero.Zotero.desktop</launchable>
   <developer_name>Corporation for Digital Scholarship</developer_name>
   <update_contact>guillaumepoiriermorency@gmail.com</update_contact>
