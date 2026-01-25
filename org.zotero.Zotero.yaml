@@ -28,8 +28,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/beta/8.0-beta.27%2B470660121/Zotero-8.0-beta.27%2B470660121_linux-x86_64.tar.xz
-        sha512: b7cbabfc7fb60e7fb1003a5f2796982a2d951d98a0412f66a6224930352881523312e3724af2234c2a62b275a7e1c740a8d2cb6a8537c03f77fb3664ccaba6dc
+        url: https://download.zotero.org/client/beta/8.0-beta.28%2Bfef217845/Zotero-8.0-beta.28%2Bfef217845_linux-x86_64.tar.xz
+        sha512: 7050cac9f0c8ad87c726d66a79af553da35681240309eb7b8e62d164cb8df96cf6211d15c53ffda860108fb992ea6170335b21756a6a409c32e5f371a8fbc9bf
         only-arches:
           - x86_64
         x-checker-data:
@@ -37,8 +37,8 @@ modules:
           url: https://www.zotero.org/download/client/dl?channel=beta&platform=linux-x86_64
           pattern: https://download.zotero.org/client/beta/([0-9.]+-beta[0-9.]+)*
       - type: archive
-        url: https://download.zotero.org/client/beta/8.0-beta.27%2B470660121/Zotero-8.0-beta.27%2B470660121_linux-arm64.tar.xz
-        sha512: 8a55181e9cb4170c82a59f159b4bd89f20e38e91f22cf466241304f6a2e2db0401f8ecc16c12b62283d0517dd349f717aa78c9bd2e9c6c6dddcd473325802d55
+        url: https://download.zotero.org/client/beta/8.0-beta.28%2Bfef217845/Zotero-8.0-beta.28%2Bfef217845_linux-arm64.tar.xz
+        sha512: 71439b0ea62fbad728eacd3730a57303b0e74ede28f5cc55e0e7ac2935505a1596b1f4b6b149df0bdae86e8469a79a5129346cdbdedc184236e3dcee86e5c178
         only-arches:
           - aarch64
         x-checker-data:
