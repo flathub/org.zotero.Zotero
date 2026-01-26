@@ -1,6 +1,6 @@
 id: org.zotero.Zotero
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
@@ -35,7 +35,16 @@ modules:
         x-checker-data:
           type: rotating-url
           url: https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64
-          pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.bz2
+          pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.xz
+      - type: archive
+        url: https://download.zotero.org/client/release/8.0/Zotero-8.0_linux-arm64.tar.xz
+        sha512: 8e7a3e49aedbf186cc48a98b0196f82fa5355ceaea97ad4edc1614fd1cfd18912520277b656fa11cddf88d2581f43ee296b540d3d0246ef188f37c2c6dbf6307
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: rotating-url
+          url: https://www.zotero.org/download/client/dl?channel=release&platform=linux-arm64
+          pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-arm64.tar.xz
       - type: file
         path: org.zotero.Zotero.appdata.xml
       - type: file
