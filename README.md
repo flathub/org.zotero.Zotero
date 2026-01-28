@@ -6,13 +6,9 @@ Not verified by, affiliated with, or supported by the Zotero project. Please con
 
 ## Known bugs
 
-### Word processor plugins crash Zotero on Wayland
+### Automatic installation of Libreoffice extension fails
 
-See issue [165](https://github.com/flathub/org.zotero.Zotero/issues/165).
-
-This is fixed in the current beta releases.
-
-Workaround for stable releases: Run the flatpak in X11/xwayland (`flatpak override --user --nosocket=wayland --socket=x11 org.zotero.Zotero`).
+Due to sandboxing Zotero can't find the Libreoffice system installation. It's possible to add the extension using the Libreoffice extension manager manually. The extension bundled with Zotero can be found under this path: `/var/lib/flatpak/app/org.zotero.Zotero/current/active/files/share/zotero/integration/libreoffice/`
 
 ## Remove home access permission
 
