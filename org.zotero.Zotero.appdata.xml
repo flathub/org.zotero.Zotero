@@ -10,20 +10,19 @@
     <p>**This wrapper is not verified by, affiliated with, or supported by the Zotero project.**</p>
     <p>**Please report issues with this Flatpak in the manifest issue tracker instead of the Zotero Forums.**</p>
     <p>Zotero is a tool for managing references and research materials. It helps to collect bibliographic data, organize files, and generate citations in a wide range of formats.</p>
-    <p>Main Features:</p>
-    <ul>
-      <li>Save references and metadata directly from library catalogs, databases and websites using the Zotero browser connector.</li>
-      <li>Organize books, articles, and web pages and attach notes, tags, and files.</li>
-      <li>Annotate PDF, EPUB and HTML files with the integrated readers.</li>
-      <li>Create citations and bibliographies in popular office suites using thousands of available citation styles.</li>
-      <li>Import and export in common formats such as BibTeX, RIS, EndNote and Wikipedia Citation Templates.</li>
-      <li>Extend the built-in functionality using plugins.</li>
-    </ul>
   </description>
   <categories>
     <category>Office</category>
     <category>Science</category>
   </categories>
+  <keywords>
+    <keyword>bibliography</keyword>
+    <keyword>biblatex</keyword>
+    <keyword>bibtex</keyword>
+    <keyword>citing</keyword>
+    <keyword>literature</keyword>
+    <keyword>research</keyword>
+</keywords>
   <branding>
     <color type="primary" scheme_preference="light">#cc2936</color>
     <color type="primary" scheme_preference="dark">#fd6263</color>
@@ -35,8 +34,10 @@
   <url type="translate">https://www.zotero.org/support/dev/localization</url>
   <url type="vcs-browser">https://github.com/zotero/zotero</url>
   <launchable type="desktop-id">org.zotero.Zotero.desktop</launchable>
-  <developer_name>Corporation for Digital Scholarship</developer_name>
-  <update_contact>guillaumepoiriermorency@gmail.com</update_contact>
+  <developer id="org.digitalscholar">
+    <name>Corporation for Digital Scholarship</name>
+  </developer>
+  <update_contact>dev_AT_dwurp.de</update_contact>
   <releases>
     <release version="8.0.1" date="2026-01-27">
       <description></description>
