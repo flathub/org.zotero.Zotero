@@ -11,18 +11,6 @@
     <p>**Please report issues with this Flatpak in the manifest issue tracker instead of the Zotero Forums.**</p>
     <p>Zotero is a tool for managing references and research materials. It helps to collect bibliographic data, organize files, and generate citations in a wide range of formats.</p>
   </description>
-  <categories>
-    <category>Office</category>
-    <category>Science</category>
-  </categories>
-  <keywords>
-    <keyword>bibliography</keyword>
-    <keyword>biblatex</keyword>
-    <keyword>bibtex</keyword>
-    <keyword>citing</keyword>
-    <keyword>literature</keyword>
-    <keyword>research</keyword>
-</keywords>
   <branding>
     <color type="primary" scheme_preference="light">#cc2936</color>
     <color type="primary" scheme_preference="dark">#fd6263</color>
