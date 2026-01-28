@@ -1,6 +1,6 @@
 id: org.zotero.Zotero
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: zotero
 rename-desktop-file: zotero.desktop
@@ -28,8 +28,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/release/8.0/Zotero-8.0_linux-x86_64.tar.xz
-        sha512: 4205c5ea7c96b3420fad5352c4025c66bd849188d9c9a02b8bfb3af4906318eb2518cdc1ccc756a8c115ef10ed4a3085185e0f57021298a51831af83f40dfaa8
+        url: https://download.zotero.org/client/release/8.0.1/Zotero-8.0.1_linux-x86_64.tar.xz
+        sha512: aef7aa1ce304eeb24e7d366a084f3914ae00ef908f52ed61337a59665641f6e62399ab971bdce5714f44bd0276d288414c98c71fb1ab720ca1ec32d35feccfb5
         only-arches:
           - x86_64
         x-checker-data:
@@ -37,8 +37,8 @@ modules:
           url: https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64
           pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.xz
       - type: archive
-        url: https://download.zotero.org/client/release/8.0/Zotero-8.0_linux-arm64.tar.xz
-        sha512: 8e7a3e49aedbf186cc48a98b0196f82fa5355ceaea97ad4edc1614fd1cfd18912520277b656fa11cddf88d2581f43ee296b540d3d0246ef188f37c2c6dbf6307
+        url: https://download.zotero.org/client/release/8.0.1/Zotero-8.0.1_linux-arm64.tar.xz
+        sha512: 3807e1dbaf2349e794405fd6c0abf80dff5fd92a9aa0c6c4ee420772d164721d79d1e4ed53031cd66860eab41a91c546c88d6c8e5bb58fa296192aeecf5fc42e
         only-arches:
           - aarch64
         x-checker-data:
