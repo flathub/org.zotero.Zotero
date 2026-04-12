@@ -31,6 +31,11 @@ modules:
       - type: archive
         url: https://github.com/williamh/dotconf/archive/refs/tags/v1.3.tar.gz
         sha256: 7f1ecf40de1ad002a065a321582ed34f8c14242309c3547ad59710ae3c805653
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/williamh/dotconf/tags
+          version-query: .[0].name | ltrimstr("v")
+          url-query: '"https://github.com/williamh/dotconf/archive/refs/tags/" + .[0].name + ".tar.gz"'
       - type: script
         commands:
           - autoreconf -fiv
@@ -50,6 +55,11 @@ modules:
       - type: archive
         url: https://github.com/brailcom/speechd/releases/download/0.12.1/speech-dispatcher-0.12.1.tar.gz
         sha256: b14a5238d287d2dcce4dd42bbd66ca65fa228e7e683708267f7b34036f7ba4b4
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/brailcom/speechd/releases/latest
+          version-query: .tag_name | ltrimstr("v")
+          url-query: '"https://github.com/brailcom/speechd/releases/download/" + .tag_name + "/speech-dispatcher-" + (.tag_name | ltrimstr("v")) + ".tar.gz"'
     cleanup:
       - /bin
       - /etc
