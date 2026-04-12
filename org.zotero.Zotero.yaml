@@ -19,10 +19,44 @@ finish-args:
   # See: https://github.com/flathub/org.zotero.Zotero/issues/82
   # and the app description for details.
   - --filesystem=home
+  - --filesystem=xdg-run/speech-dispatcher:ro
 cleanup:
   - /share/zotero/${FLATPAK_ID}.appdata.xml
   - /share/zotero/policies.json
 modules:
+  - name: dotconf
+    cleanup:
+      - '*'
+    sources:
+      - type: archive
+        url: https://github.com/williamh/dotconf/archive/refs/tags/v1.3.tar.gz
+        sha256: 7f1ecf40de1ad002a065a321582ed34f8c14242309c3547ad59710ae3c805653
+      - type: script
+        commands:
+          - autoreconf -fiv
+        dest-filename: autogen.sh
+  - name: libspeechd
+    config-opts:
+      - --disable-python
+      - --with-systemdsystemunitdir=
+      - --disable-rpath
+      - --disable-static
+      - --with-kali=no
+      - --with-baratinoo=no
+      - --with-ibmtts=no
+      - --with-voxin=no
+      - --without-oss
+    sources:
+      - type: archive
+        url: https://github.com/brailcom/speechd/releases/download/0.12.1/speech-dispatcher-0.12.1.tar.gz
+        sha256: b14a5238d287d2dcce4dd42bbd66ca65fa228e7e683708267f7b34036f7ba4b4
+    cleanup:
+      - /bin
+      - /etc
+      - /libexec
+      - /lib/speech-dispatcher
+      - /share/sounds/speech-dispatcher
+      - /share/speech-dispatcher
   - shared-modules/dbus-glib/dbus-glib.json
   - name: zotero
     buildsystem: simple
