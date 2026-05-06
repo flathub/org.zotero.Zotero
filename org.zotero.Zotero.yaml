@@ -75,8 +75,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/release/9.0.2/Zotero-9.0.2_linux-x86_64.tar.xz
-        sha512: 3e420f1e50aab4f0a6a06cbf01c8d3e9c3ed7effbd498089f0a42d90b679cd0dae2c72cdb058825fef4bc05e0e406610e3826e883eb33d2e5989395b75fac237
+        url: https://download.zotero.org/client/release/9.0.3/Zotero-9.0.3_linux-x86_64.tar.xz
+        sha512: 53b8620405c5499055853fd297475d0f1b19dc4b8837f957426d067914769ff269e27c8965a9cb45fa594fc6a596083bc67e63a01f75bd87b0f7ef3885c77961
         only-arches:
           - x86_64
         x-checker-data:
@@ -84,8 +84,8 @@ modules:
           url: https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64
           pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.xz
       - type: archive
-        url: https://download.zotero.org/client/release/9.0.2/Zotero-9.0.2_linux-arm64.tar.xz
-        sha512: 526215c387c2485acd259141e7b291a755f1e16dde2f5010de0cdddd07967dac96c1a2acdb6abde5f6ea5da9a4c5475d397cc3dfc77dc14ee3202a78a6bfdb8b
+        url: https://download.zotero.org/client/release/9.0.3/Zotero-9.0.3_linux-arm64.tar.xz
+        sha512: 65348a5d98fce93bd5ae3499f9d456c94aa0913a0d8e347b864be18a73484ed44e3a9a31c772f1f281fd3360224217bc1e9f6d9ec073e945596f5d6c487c93e0
         only-arches:
           - aarch64
         x-checker-data:
