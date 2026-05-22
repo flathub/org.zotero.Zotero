@@ -27,8 +27,11 @@
   </developer>
   <update_contact>dev_AT_dwurp.de</update_contact>
   <releases>
-    <release version="9.0.3" date="2026-05-06">
+    <release version="9.0.4" date="2026-05-22">
       <description></description>
+    </release>
+    <release version="9.0.3" date="2026-05-06">
+      <description/>
     </release>
     <release version="9.0.2" date="2026-04-30">
       <description/>
