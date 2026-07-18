@@ -7,7 +7,6 @@
   <name>Zotero</name>
   <summary>Collect, organize and cite research</summary>
   <description>
-    <p>**This wrapper is not verified by, affiliated with, or supported by the Zotero project.**</p>
     <p>**Please report issues with this Flatpak in the manifest issue tracker instead of the Zotero Forums.**</p>
     <p>Zotero is a tool for managing references and research materials. It helps to collect bibliographic data, organize files, and generate citations in a wide range of formats.</p>
   </description>
