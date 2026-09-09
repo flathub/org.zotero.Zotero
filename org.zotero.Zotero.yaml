@@ -75,8 +75,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://download.zotero.org/client/release/10.0.1/Zotero-10.0.1_linux-x86_64.tar.xz
-        sha512: 1692b3acea0f0130b187cec9b4979dff8dd999a1f1a8c90e356ef873b024754ae77205b09dfb2eb771745f243616eff377713319eb998d09d9d3d2228398d6b5
+        url: https://download.zotero.org/client/release/10.0.2/Zotero-10.0.2_linux-x86_64.tar.xz
+        sha512: 95b32d4abbc9a5abf708931a01e73112f9c05fe02abc7c1555033c395c12cc84eccb77b3119fdbb25e965b851bb2a858d2f9df5be25a8b281896e7fdb75e814e
         only-arches:
           - x86_64
         x-checker-data:
@@ -84,8 +84,8 @@ modules:
           url: https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64
           pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.xz
       - type: archive
-        url: https://download.zotero.org/client/release/10.0.1/Zotero-10.0.1_linux-arm64.tar.xz
-        sha512: f5fc0778b53a3fa9007c223a56717e73c73d8e3cadc6b41d8755561caef3b31df61acc5a978176beb24646776c748a1993e6c1f7dcad161f7a5fcde0241aa307
+        url: https://download.zotero.org/client/release/10.0.2/Zotero-10.0.2_linux-arm64.tar.xz
+        sha512: 67ef7788e106d826d208b0508ca849dea47d82bae8394f435e0f2a693badb5b29c176a2a012b5b08b8d83f390a9137bd1c4465871865f745b7842873feca2a8b
         only-arches:
           - aarch64
         x-checker-data:
