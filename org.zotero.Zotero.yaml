@@ -82,7 +82,7 @@ modules:
         x-checker-data:
           type: rotating-url
           url: https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64
-          pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-x86_64.tar.xz
+          pattern: https://download.zotero.org/client/release/[0-9.]+/Zotero-([0-9.]+)_linux-x86_64.tar.xz
       - type: archive
         url: https://download.zotero.org/client/release/10.0.6/Zotero-10.0.6_linux-arm64.tar.xz
         sha512: d60cc20516c4c9333f2361e8a067ea6b3ed51f0569f12f58d1bf0a3035d0dedeed028e78331723900828c6d868f395075847d53588a2413d3bc28b6dc79a7e7e
@@ -91,7 +91,7 @@ modules:
         x-checker-data:
           type: rotating-url
           url: https://www.zotero.org/download/client/dl?channel=release&platform=linux-arm64
-          pattern: https://download.zotero.org/client/release/([0-9.]+)/Zotero-([0-9.]+)_linux-arm64.tar.xz
+          pattern: https://download.zotero.org/client/release/[0-9.]+/Zotero-([0-9.]+)_linux-arm64.tar.xz
       - type: file
         path: org.zotero.Zotero.appdata.xml
       - type: file
