@@ -15,6 +15,10 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --own-name=org.mozilla.zotero.*
+  # Zotero 10 stores secrets (API key, WebDAV password) in the system keyring:
+  # https://github.com/zotero/zotero/pull/5897
+  # https://forums.zotero.org/discussion/133696/bug-report-flatpak-zotero-not-picking-up-gnome-keyring
+  - --talk-name=org.freedesktop.secrets
   # below file permission can be removed with minimal impact on usability,
   # we keep these permissions to preserve the functionality of the unsandboxed version
   # See: https://github.com/flathub/org.zotero.Zotero/issues/82
