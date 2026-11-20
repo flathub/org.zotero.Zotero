@@ -6,9 +6,17 @@ Not verified by, affiliated with, or supported by the Zotero project. Please con
 
 ## Known bugs
 
-### Automatic installation of Libreoffice extension fails
+### Automatic installation of LibreOffice extension fails
 
-Due to sandboxing Zotero can't find the Libreoffice system installation. It's possible to add the extension using the Libreoffice extension manager manually. The extension bundled with Zotero can be found under this path: `/var/lib/flatpak/app/org.zotero.Zotero/current/active/files/share/zotero/integration/libreoffice/`
+Due to sandboxing, Zotero can't access the system-wide LibreOffice installation. However, the extension can be installed manually using LibreOffice's Extension Manager. The extension bundled with Zotero is located in the following directory:
+`/var/lib/flatpak/app/org.zotero.Zotero/current/active/files/share/zotero/integration/libreoffice/`
+
+#### Manual installation
+
+1. In LibreOffice, go to **Tools → Extensions**.
+2. Click **Add** and navigate to the directory specified above.
+3. Select the `Zotero_LibreOffice_Integration.oxt` file and click **Open**.
+4. Restart LibreOffice when prompted to complete the installation.
 
 ## Remove home access permission
 
