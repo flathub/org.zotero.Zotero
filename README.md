@@ -24,6 +24,12 @@ your home directory locked away. For example, if want to give read access to you
 
 Please also read issue [82](https://github.com/flathub/org.zotero.Zotero/issues/82).
 
+## Give access to system keyring
+
+By default, access to `org.freedesktop.secrets` is prohibited to prevent Zotero from accessing the whole keyring. Because of this,
+Zotero will store the credentials unencrypted. To change this, run
+`flatpak override --user --talk-name org.freedesktop.secrets org.zotero.Zotero`.
+
 ## Development
 
 ### Build locally
